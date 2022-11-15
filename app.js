@@ -1,7 +1,10 @@
 const http = require("http");
 
-console.log(routes.someText);
+const express = require('express')
+const app = express()
 
-const server = http.createServer();
+app.use('/',(req,res)=>{
+    res.send("hello")
+})
 
-server.listen(3000);
+app.listen(3000);
